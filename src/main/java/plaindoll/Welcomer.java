@@ -1,5 +1,7 @@
 package plaindoll;
 
+import java.util.Random;
+
 public class Welcomer{
 	// Если хочешь больше веселья и информации про ДевОпс - приходи в мои каналы NotOps (telegram, YT, Boosty, Patreon)
 	// https://t.me/notopsofficial
@@ -15,4 +17,17 @@ public class Welcomer{
 	public String saySome(){
 		return "something in the way";
 	}
+
+	// Новый метод
+    public String sayRandomHunter() {
+        String[] replies = {
+            "Greetings, hunter.",
+            "Hello, hunter!",
+            "Good to see you, hunter.",
+            "Hunter, what brings you here?",
+            "Ah, hunter, welcome back."
+        };
+        Random rand = new Random();
+        return replies[rand.nextInt(replies.length)];
+    }
 }
